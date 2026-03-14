@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services | Bayanihan Pantry</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .service-icon{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;
+      background: linear-gradient(135deg, rgba(21,101,192,.12), rgba(46,125,50,.12));
+      border:1px solid var(--border);
+    }
+    .chip{display:inline-block;padding:.35rem .6rem;border:1px solid var(--border);border-radius:999px;background:#fff;font-size:.875rem}
+    .map-wrap img{max-height:420px;object-fit:cover}
+    .sticky-note{background:#fff;border:1px dashed var(--border);border-radius:1rem}
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html"><span style="color:var(--brand-green)">Bayanihan</span> Pantry</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Programs & Events</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="programs.html">Programs & Events</a></li>
+              <li><a class="dropdown-item" href="schedule.html">Schedule</a></li>
+              <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+              <li><a class="dropdown-item" href="news.html">News / Updates</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="volunteer.html">Volunteer</a></li>
+          <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
+          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+          <li class="nav-item ms-lg-2"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="py-5">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <div class="p-4 hero-box">
+            <h1 class="section-title mb-2">Services</h1>
+            <p class="lead mb-3">Clear, organized help for residents, donors, and volunteers.</p>
+            <p class="small-muted mb-0">
+              This page shows a complete service listing with categories, table-based schedule summary,
+              and an interactive image map (required element).
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card p-3 map-wrap">
+            <!-- IMAGE MAP (Required) -->
+            <img src="images/community-kitchen.jpg" class="img-fluid rounded-4" usemap="#servicesMap" alt="Community services map">
+            <map name="servicesMap">
+              <!-- Coordinates are approximate for common 3:2 images; still functional on click -->
+              <area shape="rect" coords="0,0,380,260" href="#bundles" alt="Food bundle distribution">
+              <area shape="rect" coords="380,0,760,260" href="#kitchen" alt="Weekend community kitchen">
+              <area shape="rect" coords="0,260,380,520" href="#donation" alt="Donation support">
+              <area shape="rect" coords="380,260,760,520" href="#volunteer" alt="Volunteer coordination">
+            </map>
+            <p class="small-muted mt-2 mb-0">
+              Tip: Click areas of the image to jump to a service section.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="pb-5">
+    <div class="container">
+
+      <!-- SERVICE CATEGORIES -->
+      <div class="row g-4">
+        <div class="col-lg-3">
+          <div class="card p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <div class="service-icon">🥫</div>
+              <h2 class="h5 fw-bold mb-0" id="bundles">Food Bundles</h2>
+            </div>
+            <p class="mb-2">Packed family bundles for households who need support.</p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="chip">Dry goods</span><span class="chip">Canned food</span><span class="chip">Hygiene (when available)</span>
+            </div>
+            <a class="btn btn-outline-green mt-3" href="schedule.html">Check Schedule</a>
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+          <div class="card p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <div class="service-icon">🍲</div>
+              <h2 class="h5 fw-bold mb-0" id="kitchen">Community Kitchen</h2>
+            </div>
+            <p class="mb-2">Hot meals prepared and served on scheduled weekends.</p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="chip">Meal prep</span><span class="chip">Serving line</span><span class="chip">Clean-up</span>
+            </div>
+            <a class="btn btn-amber mt-3" href="programs.html">See Programs</a>
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+          <div class="card p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <div class="service-icon">📦</div>
+              <h2 class="h5 fw-bold mb-0" id="donation">Donation Support</h2>
+            </div>
+            <p class="mb-2">Guidelines and coordination for safe, useful donations.</p>
+            <ul class="mb-0">
+              <li>Accepted items list</li>
+              <li>Drop-off coordination</li>
+              <li>Quality checks</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+          <div class="card p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <div class="service-icon">🤝</div>
+              <h2 class="h5 fw-bold mb-0" id="volunteer">Volunteer Coordination</h2>
+            </div>
+            <p class="mb-2">Roles, orientation, and safety reminders for volunteers.</p>
+            <ol class="mb-0">
+              <li>Choose a role</li>
+              <li>Review safety tips</li>
+              <li>Confirm schedule</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <!-- TABLE (Required element) -->
+      <div class="card p-4 mt-4">
+        <h2 class="h5 fw-bold mb-2">Service Summary Table</h2>
+        <p class="small-muted mb-3">Example format for this academic project (times/locations may change).</p>
+        <div class="table-responsive">
+          <table class="table table-bordered align-middle mb-0">
+            <thead class="table-light">
+              <tr>
+                <th style="width:14%">Service</th>
+                <th>Description</th>
+                <th style="width:20%">Typical Day</th>
+                <th style="width:22%">Where to Confirm</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Food Bundles</strong></td>
+                <td>Packing + distribution of family bundles with labeled contents.</td>
+                <td>Sat / Sun</td>
+                <td><a href="schedule.html">Schedule</a> + <a href="news.html">News</a></td>
+              </tr>
+              <tr>
+                <td><strong>Community Kitchen</strong></td>
+                <td>Volunteer-supported cooking and serving of hot meals.</td>
+                <td>Sun</td>
+                <td><a href="programs.html">Programs</a> + <a href="safety.html">Safety Tips</a></td>
+              </tr>
+              <tr>
+                <td><strong>Donation Support</strong></td>
+                <td>Donation guidelines, quality checks, and coordinated drop-off.</td>
+                <td>Anytime (by coordination)</td>
+                <td><a href="donate.html">Donate</a> + <a href="contact.html">Contact</a></td>
+              </tr>
+              <tr>
+                <td><strong>Volunteer</strong></td>
+                <td>Role assignment: packing, distribution, kitchen, logistics, documentation.</td>
+                <td>Based on schedule</td>
+                <td><a href="volunteer.html">Volunteer</a> + <a href="contact.html">Contact</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- NOTES / USABILITY -->
+      <div class="row g-4 mt-1">
+        <div class="col-lg-7">
+          <div class="card p-4 h-100">
+            <h2 class="h5 fw-bold mb-2">How to Use This Page</h2>
+            <ul class="mb-0">
+              <li>Click the <strong>image map</strong> at the top to jump to a service section.</li>
+              <li>Use the <strong>table</strong> to compare services quickly (days + where to confirm).</li>
+              <li>Follow the links for schedules, safety reminders, and coordination forms.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="sticky-note p-4 h-100">
+            <h2 class="h5 fw-bold mb-2">Quick Reminder</h2>
+            <p class="mb-2">Always check updates before coming on-site.</p>
+            <div class="d-flex gap-2 flex-wrap">
+              <a class="btn btn-outline-green" href="schedule.html">Schedule</a>
+              <a class="btn btn-amber" href="news.html">News</a>
+              <a class="btn btn-outline-green" href="contact.html">Contact</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="card p-4 mt-4">
+        <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+          <div>
+            <h2 class="h5 fw-bold mb-1">Next: Meet Our Service Providers</h2>
+            <p class="mb-0">View partner groups and volunteer teams with a gallery + pop-up images.</p>
+          </div>
+          <a class="btn btn-amber" href="service-providers.html">Open Service Providers</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="py-5">
+    <div class="container">
+      <h5 class="fw-bold mb-2">Site Map</h5>
+      <div class="d-flex flex-wrap gap-3 mb-3">
+        <a href="index.html">Home</a><a href="services.html">Services</a><a href="service-providers.html">Service Providers</a>
+        <a href="programs.html">Programs</a><a href="schedule.html">Schedule</a><a href="volunteer.html">Volunteer</a>
+        <a href="donate.html">Donate</a><a href="resources.html">Resources</a><a href="contact.html">Contact</a>
+      </div>
+      <p class="mb-1"><strong>Developer:</strong> Robi Balugay</p>
+      <p class="mb-1"><strong>Course & Section:</strong> ITS121L – BM14</p>
+      <p class="mb-0"><strong>School Year:</strong> 2025–2026</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
